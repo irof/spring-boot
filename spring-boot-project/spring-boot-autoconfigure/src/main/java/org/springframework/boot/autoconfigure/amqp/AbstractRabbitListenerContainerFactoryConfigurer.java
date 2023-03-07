@@ -130,6 +130,7 @@ public abstract class AbstractRabbitListenerContainerFactoryConfigurer<T extends
 			builder.recoverer(recoverer);
 			factory.setAdviceChain(builder.build());
 		}
+		factory.setObservationEnabled(configuration.isObservationEnabled());
 	}
 
 }

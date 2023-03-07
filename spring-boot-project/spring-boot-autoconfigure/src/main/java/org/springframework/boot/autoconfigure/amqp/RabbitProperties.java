@@ -729,6 +729,11 @@ public class RabbitProperties {
 		private boolean deBatchingEnabled = true;
 
 		/**
+		 * Whether enable observation via micrometer
+		 */
+		private boolean observationEnabled = true;
+
+		/**
 		 * Optional properties for a retry interceptor.
 		 */
 		private final ListenerRetry retry = new ListenerRetry();
@@ -779,6 +784,13 @@ public class RabbitProperties {
 			return this.retry;
 		}
 
+		public boolean isObservationEnabled() {
+			return this.observationEnabled;
+		}
+
+		public void setObservationEnabled(boolean observationEnabled) {
+			this.observationEnabled = observationEnabled;
+		}
 	}
 
 	/**
